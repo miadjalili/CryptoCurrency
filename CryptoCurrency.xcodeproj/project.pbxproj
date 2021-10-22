@@ -13,9 +13,11 @@
 		8CCF346E272346E1004B324C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCF346C272346E1004B324C /* Main.storyboard */; };
 		8CCF3470272346E5004B324C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CCF346F272346E5004B324C /* Assets.xcassets */; };
 		8CCF3473272346E5004B324C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCF3471272346E5004B324C /* LaunchScreen.storyboard */; };
+		FD9CA5F2A2699049302D3FFB /* libPods-CryptoCurrency.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF2FF68D6896EA2B6F3B58 /* libPods-CryptoCurrency.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51DF2FF68D6896EA2B6F3B58 /* libPods-CryptoCurrency.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptoCurrency.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCF3463272346E1004B324C /* CryptoCurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCF3466272346E1004B324C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CCF3468272346E1004B324C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		8CCF346F272346E5004B324C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CCF3472272346E5004B324C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CCF3474272346E5004B324C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B9CC5575A7C0BAFDBE7DBF8 /* Pods-CryptoCurrency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCurrency.release.xcconfig"; path = "Target Support Files/Pods-CryptoCurrency/Pods-CryptoCurrency.release.xcconfig"; sourceTree = "<group>"; };
+		AFCE6D33EC869483F43D2A9D /* Pods-CryptoCurrency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCurrency.debug.xcconfig"; path = "Target Support Files/Pods-CryptoCurrency/Pods-CryptoCurrency.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9CA5F2A2699049302D3FFB /* libPods-CryptoCurrency.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A99C8E70C60C161270727CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51DF2FF68D6896EA2B6F3B58 /* libPods-CryptoCurrency.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8CCF345A272346E1004B324C = {
 			isa = PBXGroup;
 			children = (
 				8CCF3465272346E1004B324C /* CryptoCurrency */,
 				8CCF3464272346E1004B324C /* Products */,
+				AFDC5C13E091FE2E949BECB8 /* Pods */,
+				8A99C8E70C60C161270727CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = CryptoCurrency;
 			sourceTree = "<group>";
 		};
+		AFDC5C13E091FE2E949BECB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFCE6D33EC869483F43D2A9D /* Pods-CryptoCurrency.debug.xcconfig */,
+				9B9CC5575A7C0BAFDBE7DBF8 /* Pods-CryptoCurrency.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CCF3477272346E5004B324C /* Build configuration list for PBXNativeTarget "CryptoCurrency" */;
 			buildPhases = (
+				07514711A1C4149373FA8A74 /* [CP] Check Pods Manifest.lock */,
 				8CCF345F272346E1004B324C /* Sources */,
 				8CCF3460272346E1004B324C /* Frameworks */,
 				8CCF3461272346E1004B324C /* Resources */,
@@ -131,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07514711A1C4149373FA8A74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoCurrency-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8CCF345F272346E1004B324C /* Sources */ = {
@@ -283,6 +334,7 @@
 		};
 		8CCF3478272346E5004B324C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFCE6D33EC869483F43D2A9D /* Pods-CryptoCurrency.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +354,7 @@
 		};
 		8CCF3479272346E5004B324C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B9CC5575A7C0BAFDBE7DBF8 /* Pods-CryptoCurrency.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
