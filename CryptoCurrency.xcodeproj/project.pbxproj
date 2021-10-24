@@ -13,6 +13,12 @@
 		8CCF346E272346E1004B324C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCF346C272346E1004B324C /* Main.storyboard */; };
 		8CCF3470272346E5004B324C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CCF346F272346E5004B324C /* Assets.xcassets */; };
 		8CCF3473272346E5004B324C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCF3471272346E5004B324C /* LaunchScreen.storyboard */; };
+		8CCF347C2724132D004B324C /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF347B2724132D004B324C /* APIRouter.swift */; };
+		8CCF347E27241440004B324C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF347D27241440004B324C /* Constants.swift */; };
+		8CCF34802724176E004B324C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF347F2724176E004B324C /* Models.swift */; };
+		8CCF3483272423F8004B324C /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF3482272423F8004B324C /* APIConfiguration.swift */; };
+		8CCF348527242496004B324C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF348427242496004B324C /* APIClient.swift */; };
+		8CCF348727255AFA004B324C /* ModelFiats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF348627255AFA004B324C /* ModelFiats.swift */; };
 		FD9CA5F2A2699049302D3FFB /* libPods-CryptoCurrency.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF2FF68D6896EA2B6F3B58 /* libPods-CryptoCurrency.a */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +32,12 @@
 		8CCF346F272346E5004B324C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CCF3472272346E5004B324C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CCF3474272346E5004B324C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CCF347B2724132D004B324C /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		8CCF347D27241440004B324C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8CCF347F2724176E004B324C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		8CCF3482272423F8004B324C /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		8CCF348427242496004B324C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		8CCF348627255AFA004B324C /* ModelFiats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFiats.swift; sourceTree = "<group>"; };
 		9B9CC5575A7C0BAFDBE7DBF8 /* Pods-CryptoCurrency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCurrency.release.xcconfig"; path = "Target Support Files/Pods-CryptoCurrency/Pods-CryptoCurrency.release.xcconfig"; sourceTree = "<group>"; };
 		AFCE6D33EC869483F43D2A9D /* Pods-CryptoCurrency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCurrency.debug.xcconfig"; path = "Target Support Files/Pods-CryptoCurrency/Pods-CryptoCurrency.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +83,8 @@
 		8CCF3465272346E1004B324C /* CryptoCurrency */ = {
 			isa = PBXGroup;
 			children = (
+				8CCF348127241C34004B324C /* Models */,
+				8CCF347A27240CF5004B324C /* APIServices */,
 				8CCF3466272346E1004B324C /* AppDelegate.swift */,
 				8CCF3468272346E1004B324C /* SceneDelegate.swift */,
 				8CCF346A272346E1004B324C /* ViewController.swift */,
@@ -82,13 +96,32 @@
 			path = CryptoCurrency;
 			sourceTree = "<group>";
 		};
+		8CCF347A27240CF5004B324C /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF347B2724132D004B324C /* APIRouter.swift */,
+				8CCF347D27241440004B324C /* Constants.swift */,
+				8CCF3482272423F8004B324C /* APIConfiguration.swift */,
+				8CCF348427242496004B324C /* APIClient.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		8CCF348127241C34004B324C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF347F2724176E004B324C /* Models.swift */,
+				8CCF348627255AFA004B324C /* ModelFiats.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AFDC5C13E091FE2E949BECB8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				AFCE6D33EC869483F43D2A9D /* Pods-CryptoCurrency.debug.xcconfig */,
 				9B9CC5575A7C0BAFDBE7DBF8 /* Pods-CryptoCurrency.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -188,8 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCF347E27241440004B324C /* Constants.swift in Sources */,
 				8CCF346B272346E1004B324C /* ViewController.swift in Sources */,
+				8CCF347C2724132D004B324C /* APIRouter.swift in Sources */,
+				8CCF348527242496004B324C /* APIClient.swift in Sources */,
+				8CCF34802724176E004B324C /* Models.swift in Sources */,
 				8CCF3467272346E1004B324C /* AppDelegate.swift in Sources */,
+				8CCF3483272423F8004B324C /* APIConfiguration.swift in Sources */,
+				8CCF348727255AFA004B324C /* ModelFiats.swift in Sources */,
 				8CCF3469272346E1004B324C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
