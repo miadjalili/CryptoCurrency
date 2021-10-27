@@ -10,10 +10,14 @@ import Foundation
 struct API {
     struct ProductionServer {
         static let baseURL = "https://api.coinstats.app/public/v1"
+        static let baseURL2 = "https://api.coinstats.app/public/v1"
     }
     
     struct APIParameterKey {
         static let currency = "currency"
+        static let coinId = "coinId"
+        static let exchange = "exchange"
+        static let pair = "pair"
         
     }
 }

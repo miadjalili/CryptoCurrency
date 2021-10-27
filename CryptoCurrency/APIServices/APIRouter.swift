@@ -11,13 +11,14 @@ import Alamofire
 enum APIRouter: URLRequestConvertible {
     
     case Coins(currency: String)
-    
-   
+    case Exchanges
+    case markets(coinId: String)
+    case Tickers(exchange:String ,pair: String)
     
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
         switch self {
-        case  .Coins:
+        case  .Coins,.Exchanges,.markets,.Tickers:
             return .get
         }
     }
@@ -27,6 +28,12 @@ enum APIRouter: URLRequestConvertible {
         switch self {
         case .Coins:
             return "/coins"
+        case .Exchanges:
+            return "/exchanges"
+        case.markets:
+            return "/markets"
+        case.Tickers:
+            return "/tickers"
         }
     }
     
@@ -35,6 +42,10 @@ enum APIRouter: URLRequestConvertible {
         switch self {
         case .Coins(let currency):
             return [API.APIParameterKey.currency: currency]
+        case .markets(let coinID):
+            return [API.APIParameterKey.coinId: coinID]
+        case .Tickers(let exchange,let pair):
+        return[API.APIParameterKey.exchange: exchange,API.APIParameterKey.pair: pair]
         default:
             return nil
         }
@@ -42,7 +53,15 @@ enum APIRouter: URLRequestConvertible {
     
     // MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
-        let url = try API.ProductionServer.baseURL.asURL()
+      
+        var url = try API.ProductionServer.baseURL.asURL()
+        switch self {
+        case .Exchanges:
+            url =  try API.ProductionServer.baseURL2.asURL()
+        default:
+            url =  try API.ProductionServer.baseURL.asURL()
+        }
+        
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         
@@ -58,6 +77,7 @@ enum APIRouter: URLRequestConvertible {
             do {
                 if method == .get {
                     urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
+                   
                 }else{
                 
                     urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
@@ -66,7 +86,7 @@ enum APIRouter: URLRequestConvertible {
                 throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
             }
         }
-        
+        print(urlRequest)
         return urlRequest
     }
 }

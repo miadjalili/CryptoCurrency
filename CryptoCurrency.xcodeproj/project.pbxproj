@@ -19,6 +19,9 @@
 		8CCF3483272423F8004B324C /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF3482272423F8004B324C /* APIConfiguration.swift */; };
 		8CCF348527242496004B324C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF348427242496004B324C /* APIClient.swift */; };
 		8CCF348727255AFA004B324C /* ModelFiats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF348627255AFA004B324C /* ModelFiats.swift */; };
+		8CCF348927270544004B324C /* ModelExchanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF348827270544004B324C /* ModelExchanges.swift */; };
+		8CCF348B27270720004B324C /* ModelMarkets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF348A27270720004B324C /* ModelMarkets.swift */; };
+		8CCF348D27288788004B324C /* GetTickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF348C27288788004B324C /* GetTickers.swift */; };
 		FD9CA5F2A2699049302D3FFB /* libPods-CryptoCurrency.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF2FF68D6896EA2B6F3B58 /* libPods-CryptoCurrency.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,9 @@
 		8CCF3482272423F8004B324C /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		8CCF348427242496004B324C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		8CCF348627255AFA004B324C /* ModelFiats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFiats.swift; sourceTree = "<group>"; };
+		8CCF348827270544004B324C /* ModelExchanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExchanges.swift; sourceTree = "<group>"; };
+		8CCF348A27270720004B324C /* ModelMarkets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMarkets.swift; sourceTree = "<group>"; };
+		8CCF348C27288788004B324C /* GetTickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTickers.swift; sourceTree = "<group>"; };
 		9B9CC5575A7C0BAFDBE7DBF8 /* Pods-CryptoCurrency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCurrency.release.xcconfig"; path = "Target Support Files/Pods-CryptoCurrency/Pods-CryptoCurrency.release.xcconfig"; sourceTree = "<group>"; };
 		AFCE6D33EC869483F43D2A9D /* Pods-CryptoCurrency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCurrency.debug.xcconfig"; path = "Target Support Files/Pods-CryptoCurrency/Pods-CryptoCurrency.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +118,9 @@
 			children = (
 				8CCF347F2724176E004B324C /* Models.swift */,
 				8CCF348627255AFA004B324C /* ModelFiats.swift */,
+				8CCF348827270544004B324C /* ModelExchanges.swift */,
+				8CCF348A27270720004B324C /* ModelMarkets.swift */,
+				8CCF348C27288788004B324C /* GetTickers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,10 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCF348D27288788004B324C /* GetTickers.swift in Sources */,
 				8CCF347E27241440004B324C /* Constants.swift in Sources */,
+				8CCF348B27270720004B324C /* ModelMarkets.swift in Sources */,
 				8CCF346B272346E1004B324C /* ViewController.swift in Sources */,
 				8CCF347C2724132D004B324C /* APIRouter.swift in Sources */,
 				8CCF348527242496004B324C /* APIClient.swift in Sources */,
+				8CCF348927270544004B324C /* ModelExchanges.swift in Sources */,
 				8CCF34802724176E004B324C /* Models.swift in Sources */,
 				8CCF3467272346E1004B324C /* AppDelegate.swift in Sources */,
 				8CCF3483272423F8004B324C /* APIConfiguration.swift in Sources */,
